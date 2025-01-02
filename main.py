@@ -36,6 +36,11 @@ def main():
             if object.is_colliding_with(player):
                 print("Game over!")
                 sys.exit()
+            for shot in shots:
+                if object.is_colliding_with(shot):
+                    object.split()
+                    shot.kill()
+
                 
         screen.fill("black")
         
